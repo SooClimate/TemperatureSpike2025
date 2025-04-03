@@ -22,7 +22,7 @@ library(xtable)
 avoid_color_deficient_vision <- F
 
 source("./r/rdef.r")
-source("../2018-cmip5/src/adjust.r")
+source("./r/adjust.r")
 
 dat_dir <- "./data/"
 scm_dt <- 6
