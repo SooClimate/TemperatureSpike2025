@@ -1175,11 +1175,11 @@ sav_stat_annual_roll <- function(fol, reg, hsrc, psrc, sce, tag, obs_src, src, e
     }  
 }
 
-# # save all the climate variability indices for the multiple regressions
-# save_var_index_all()
+# save all the climate variability indices for the multiple regressions
+save_var_index_all()
 
-# # save the monthly climate variables as matrices for the multiple regressions
-# sav_cali_rfc_mtx_m("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm")
+# save the monthly climate variables as matrices for the multiple regressions
+sav_cali_rfc_mtx_m("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm")
 
 
 for(o in c(1:3)){
@@ -1204,32 +1204,32 @@ for(o in c(1:3)){
 ########## sav_stat_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo")
 ########## sav_stat_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo")
 
-# # save the annual lower and upper bounds of the climate variables of the ensemble members
-# sav_stat_annual_all("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo")
-# sav_stat_annual_all("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo")
-# sav_stat_annual_all("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo")
+# save the annual lower and upper bounds of the climate variables of the ensemble members
+sav_stat_annual_all("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo")
+sav_stat_annual_all("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo")
+sav_stat_annual_all("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo")
 
-# # save the final results (from annual lower and upper bounds) for the analysis in the manuscript
-# sav_stat_annual_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo")
-# sav_stat_annual_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo")
-# sav_stat_annual_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo")
+# save the final results (from annual lower and upper bounds) for the analysis in the manuscript
+sav_stat_annual_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo")
+sav_stat_annual_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo")
+sav_stat_annual_final("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo")
 
-# nthread <- 8
+nthread <- 8
 
-# # define the climate variables for calculating the 11-year rolling trends 
-# roll_var_lst <- c("rfc_CO2", "rfc_CH4", "rfc_N2O", "r_fgs", "r_o3", "rfc_H2Os",  "r_abd", "r_aer", "rfc_cloud", "r_ghg", "r_othanthro", "rfc_volc", "rfc_solar", "mei", "amo","est", "obs")
-# # roll_var_lst <- c("rfc_volc", "rfc_solar", "mei", "amo","est", "obs")
-# for(var in roll_var_lst){
-#     for(k in c(11)){#seq(3,17,2)
-#     # # save the rolling trends for the temperature increase
-#         # ########## sav_stat_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo",k)
-#         # ########## sav_stat_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo",k)
-#         # ########## sav_stat_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo",k)
+# define the climate variables for calculating the 11-year rolling trends 
+roll_var_lst <- c("rfc_CO2", "rfc_CH4", "rfc_N2O", "r_fgs", "r_o3", "rfc_H2Os",  "r_abd", "r_aer", "rfc_cloud", "r_ghg", "r_othanthro", "rfc_volc", "rfc_solar", "mei", "amo","est", "obs")
+# roll_var_lst <- c("rfc_volc", "rfc_solar", "mei", "amo","est", "obs")
+for(var in roll_var_lst){
+    for(k in c(11)){#seq(3,17,2)
+    # # save the rolling trends for the temperature increase
+        # ########## sav_stat_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo",k)
+        # ########## sav_stat_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo",k)
+        # ########## sav_stat_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo",k)
 
-#         # save the rolling trends (from annual lower and upper bounds) for the temperature increase
-#         sav_stat_annual_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo",k)
-#         sav_stat_annual_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo",k)
-#         sav_stat_annual_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo",k)
+        # save the rolling trends (from annual lower and upper bounds) for the temperature increase
+        sav_stat_annual_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="HadCRUTv5.0.2", exp_tag="AntVolSolMeiAmo",k)
+        sav_stat_annual_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="GlobalTemp_v6", exp_tag="AntVolSolMeiAmo",k)
+        sav_stat_annual_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", var, obs_src="Berkeley_Earth", exp_tag="AntVolSolMeiAmo",k)
 
-#     }
-#  }
+    }
+ }

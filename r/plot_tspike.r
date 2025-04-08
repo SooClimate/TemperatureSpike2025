@@ -4220,14 +4220,14 @@ fl_ext <- ".pdf"
 
 nthread <- 4
 
-# # save the main climate variables for review using HadCRUTv5.0.2
-# sav_corr_mtx("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855, end_yr =2024)
+# save the main climate variables for review using HadCRUTv5.0.2
+sav_corr_mtx("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855, end_yr =2024)
 
-# # save the main climate variables for review using GlobalTemp_v6
-# sav_corr_mtx("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855, end_yr =2024)
+# save the main climate variables for review using GlobalTemp_v6
+sav_corr_mtx("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855, end_yr =2024)
 
-# # save the main climate variables for review using Berkeley_Earth
-# sav_corr_mtx("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855, end_yr =2024)
+# save the main climate variables for review using Berkeley_Earth
+sav_corr_mtx("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855, end_yr =2024)
 
 # export the statistical coefficients to a latex table used in the manuscript, using HadCRUTv5.0.2
 sav_stat_tex_all("HadCRUTv5.0.2")
@@ -4239,93 +4239,93 @@ sav_stat_tex_all("GlobalTemp_v6")
 sav_stat_tex_all("Berkeley_Earth")
 
 
-# # plot the histogram of the fitting coefficients and statistical coefficients, using HadCRUTv5.0.2
-# plot_model_hist("HadCRUTv5.0.2", "AntVolSolMeiAmo")
+# plot the histogram of the fitting coefficients and statistical coefficients, using HadCRUTv5.0.2
+plot_model_hist("HadCRUTv5.0.2", "AntVolSolMeiAmo")
 
-# # plot the histogram of the fitting coefficients and statistical coefficients, using GlobalTemp_v6
-# plot_model_hist("GlobalTemp_v6", "AntVolSolMeiAmo")
+# plot the histogram of the fitting coefficients and statistical coefficients, using GlobalTemp_v6
+plot_model_hist("GlobalTemp_v6", "AntVolSolMeiAmo")
 
-# # plot the histogram of the fitting coefficients and statistical coefficients, using Berkeley_Earth
-# plot_model_hist("Berkeley_Earth", "AntVolSolMeiAmo")
-
-
-# # plot the demonstration of the regression using HadCRUTv5.0.2, as Fig. 1 in the manuscript
-# plot_demo("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2",start_yr=1855)
-
-# # plot the demonstration of the regression using GlobalTemp_v6
-# plot_demo("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6",start_yr=1855)
-
-# # plot the demonstration of the regression using Berkeley_Earth
-# plot_demo("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth",start_yr=1855)
+# plot the histogram of the fitting coefficients and statistical coefficients, using Berkeley_Earth
+plot_model_hist("Berkeley_Earth", "AntVolSolMeiAmo")
 
 
-# # plot the temperature spike figure using HadCRUTv5.0.2, comparing the 2022-2024 with the 2019-2021
-# plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",prev_st_yr=2019, prev_ed_yr=2021, curr_st_yr=2022, curr_ed_yr=2024)
+# plot the demonstration of the regression using HadCRUTv5.0.2, as Fig. 1 in the manuscript
+plot_demo("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2",start_yr=1855)
 
-# #plot the temperature spike figure using HadCRUTv5.0.2, comparing the 2022-2024 with the 2010-2021 as in Fig. 2 in the manuscript
-# plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2")
+# plot the demonstration of the regression using GlobalTemp_v6
+plot_demo("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6",start_yr=1855)
 
-# # plot the temperature spike figure using GlobalTemp_v6, comparing the 2022-2024 with the 2010-2021
-# plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6")
-
-# # plot the temperature spike figure using Berkeley_Earth, comparing the 2022-2024 with the 2010-2021
-# plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth")
+# plot the demonstration of the regression using Berkeley_Earth
+plot_demo("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth",start_yr=1855)
 
 
-# # plot the 11-year rolling trends for the climate varaibles using HadCRUTv5.0.2
-# plot_mei_amo_rfc_regr_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855, k=11)
+# plot the temperature spike figure using HadCRUTv5.0.2, comparing the 2022-2024 with the 2019-2021
+plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",prev_st_yr=2019, prev_ed_yr=2021, curr_st_yr=2022, curr_ed_yr=2024)
 
-# # plot the 11-year rolling trends for the climate varaibles using GlobalTemp_v6
-# plot_mei_amo_rfc_regr_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855, k=11)
+#plot the temperature spike figure using HadCRUTv5.0.2, comparing the 2022-2024 with the 2010-2021 as in Fig. 2 in the manuscript
+plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2")
 
-# # plot the 11-year rolling trends for the climate varaibles using Berkeley_Earth
-# plot_mei_amo_rfc_regr_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855, k=11)
+# plot the temperature spike figure using GlobalTemp_v6, comparing the 2022-2024 with the 2010-2021
+plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6")
 
-
-# # plot the 11-year rolling trends using HadCRUTv5.0.2
-# plot_mei_amo_rfc_regr_roll_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855, k=11)
-
-# # plot the 11-year rolling trends using GlobalTemp_v6
-# plot_mei_amo_rfc_regr_roll_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855, k=11)
+# plot the temperature spike figure using Berkeley_Earth, comparing the 2022-2024 with the 2010-2021
+plot_regre_spike("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth")
 
 
-# # plot the 11-year rolling trends using Berkeley_Earth
-# plot_mei_amo_rfc_regr_roll_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855, k=11)
+# plot the 11-year rolling trends for the climate varaibles using HadCRUTv5.0.2
+plot_mei_amo_rfc_regr_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855, k=11)
+
+# plot the 11-year rolling trends for the climate varaibles using GlobalTemp_v6
+plot_mei_amo_rfc_regr_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855, k=11)
+
+# plot the 11-year rolling trends for the climate varaibles using Berkeley_Earth
+plot_mei_amo_rfc_regr_roll("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855, k=11)
 
 
-# # plot the aerosol panel using HadCRUTv5.0.2
-# plot_mei_amo_aero_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
+# plot the 11-year rolling trends using HadCRUTv5.0.2
+plot_mei_amo_rfc_regr_roll_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855, k=11)
+
+# plot the 11-year rolling trends using GlobalTemp_v6
+plot_mei_amo_rfc_regr_roll_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855, k=11)
 
 
-# # plot the panel for halogenated gases using HadCRUTv5.0.2
-# plot_mei_amo_fgs_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
+# plot the 11-year rolling trends using Berkeley_Earth
+plot_mei_amo_rfc_regr_roll_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855, k=11)
 
 
-# # plot the panel for all climate variables using HadCRUTv5.0.2
-# plot_mei_amo_rfc_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
-
-# # plot the panel for all climate variables using GlobalTemp_v6
-# plot_mei_amo_rfc_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855)
-
-# # plot the panel for all climate variables using Berkeley_Earth
-# plot_mei_amo_rfc_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855)
+# plot the aerosol panel using HadCRUTv5.0.2
+plot_mei_amo_aero_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
 
 
-# # plot the panel for selected climate variables using HadCRUTv5.0.2
-# plot_mei_amo_rfc_regr_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
+# plot the panel for halogenated gases using HadCRUTv5.0.2
+plot_mei_amo_fgs_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
 
-# # plot the panel for selected climate variables using GlobalTemp_v6
-# plot_mei_amo_rfc_regr_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855)
 
-# # plot the panel for selected climate variables using Berkeley_Earth
-# plot_mei_amo_rfc_regr_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855)
+# plot the panel for all climate variables using HadCRUTv5.0.2
+plot_mei_amo_rfc_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
 
-# # plot the climate variation panel for the cooling phase and warming slowdown using HadCRUTv5.0.2
-# plot_anorm_hist("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2")
+# plot the panel for all climate variables using GlobalTemp_v6
+plot_mei_amo_rfc_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855)
 
-# # plot the climate variation panel for the cooling phase and warming slowdown using GlobalTemp_v6
-# plot_anorm_hist("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6")
+# plot the panel for all climate variables using Berkeley_Earth
+plot_mei_amo_rfc_regr_full("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855)
 
-# # plot the climate variation panel for the cooling phase and warming slowdown using Berkeley_Earth
-# plot_anorm_hist("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth")
+
+# plot the panel for selected climate variables using HadCRUTv5.0.2
+plot_mei_amo_rfc_regr_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "HadCRUTv5.0.2",start_yr=1855)
+
+# plot the panel for selected climate variables using GlobalTemp_v6
+plot_mei_amo_rfc_regr_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "GlobalTemp_v6",start_yr=1855)
+
+# plot the panel for selected climate variables using Berkeley_Earth
+plot_mei_amo_rfc_regr_nat("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", "Berkeley_Earth",start_yr=1855)
+
+# plot the climate variation panel for the cooling phase and warming slowdown using HadCRUTv5.0.2
+plot_anorm_hist("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="HadCRUTv5.0.2")
+
+# plot the climate variation panel for the cooling phase and warming slowdown using GlobalTemp_v6
+plot_anorm_hist("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="GlobalTemp_v6")
+
+# plot the climate variation panel for the cooling phase and warming slowdown using Berkeley_Earth
+plot_anorm_hist("periodcrfc_tAll", "WORLD", "COMB", "IAMC", "SSP1_19", "fscm_tatm", obs_src="Berkeley_Earth")
 
