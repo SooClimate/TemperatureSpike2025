@@ -1,13 +1,13 @@
 # A multiple regression model for climate change attribution analysis
 
 ## For article:
-
+``
 	Continued increase in atmospheric carbon dioxide exacerbated the 2022-2024 global temperature spike
-
+``
 ## Description:
-
+``
 	This repository contains the code for reproducing the findings of the paper "Continued increase in atmospheric carbon dioxide exacerbated the 2022-2024 global temperature spike." This README describes the code and data for reproducibility. The code is written in R and is designed to be run on a Mac OS or Linux system (not tested under Windows). It is tested under R version 4.4.3. The code is divided into two parts: the first part is for running the multiple linear regression model, and the second part is for plotting the results.
-
+``
 ## Dataset used in this study:
 
 ### GMT
@@ -186,9 +186,9 @@
 - Use the bash scripts in the sh folder to run the calculation in a parallel computation environment.
 
 ## License
-
+``
 This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
-
+``
 ## Developed and maintained by: 
 
 Xuanming Su & Hideo Shiogama
